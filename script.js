@@ -12,17 +12,30 @@ function ajouter(choix){
     if (choix === 'pomme')
     {
         prix = document.getElementById("prixPommes").innerText;
-        prix = parseInt(prix) + 13.50;
-        document.getElementById("prixPommes").innerText = prix
-        alert("L'item pomme est bien ajouté") // Fait un Pop-up
+        prix = +prix + 13.50;
+        document.getElementById("prixPommes").innerText = prix.toFixed(2)
+        prixtotal = document.getElementById("prixTotal").innerText;
+        prixtotal = +prixtotal + +prix
+        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
+
     }
     else if (choix === 'poire')
     {
-        alert("L'item poire est bien ajouté") // Fait un Pop-up
+        prix = document.getElementById("prixPoires").innerText;
+        prix = +prix + 20.00;
+        document.getElementById("prixPoires").innerText = prix.toFixed(2)
+        prixtotal = document.getElementById("prixTotal").innerText;
+        prixtotal = +prixtotal + +prix
+        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
     }
     else
     {
-        alert("L'item prune est bien ajouté") // Fait un Pop-up
+        prix = document.getElementById("prixPrunes").innerText;
+        prix = +prix + 22.00;
+        document.getElementById("prixPrunes").innerText = prix.toFixed(2)
+        prixtotal = document.getElementById("prixTotal").innerText;
+        prixtotal = +prixtotal + +prix
+        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
     }
 
 
