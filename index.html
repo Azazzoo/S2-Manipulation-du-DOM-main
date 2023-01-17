@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Exercice JavaScript</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -24,24 +25,24 @@
           <tbody>
             <tr>
               <th scope="row">Pommes</th>
-              <td>13,50 $</td>
-              <td>10 lbs</td>
+              <td id="prixpomme">13,50 $</td>
+              <td id="poidpom">10 lbs</td>
             </tr>
             <tr>
               <th scope="row">Poires</th>
-              <td>20,00 $</td>
+              <td id="prixpoire">20,00 $</td>
               <td>12 lbs</td>
             </tr>
             <tr>
               <th scope="row">Prunes</th>
-              <td>22,00 $</td>
+              <td id="prixprunes">22,00 $</td>
               <td>15 lbs</td>
             </tr>
           </tbody>
         </table>
-        <button>Acheter un sac de pommes</button>
-        <button>Acheter un sac de poires</button>
-        <button>Acheter un sac de prunes</button>
+        <button onclick="ajouter('pomme')">Acheter un sac de pommes</button>
+        <button onclick="ajouter('poire')">Acheter un sac de poires</button>
+        <button onclick="ajouter('prune')">Acheter un sac de prunes</button>
       </section>
       <section>
         <h2>Vos achats</h2>
