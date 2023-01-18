@@ -11,33 +11,53 @@ function ajouter(choix){
 
     if (choix === 'pomme')
     {
-        prix = document.getElementById("prixPommes").innerText;
-        prix = +prix + 13.50;
-        document.getElementById("prixPommes").innerText = prix.toFixed(2)
-        prixtotal = document.getElementById("prixTotal").innerText;
-        prixtotal = +prixtotal + +prix
-        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
-
+        prixnom = 'prixPommes';
+        poidsnom = 'poidsPommes';
+        qtsnom = 'qtePommes'
+        tarif = 13.50;
+        weight = 10;
     }
     else if (choix === 'poire')
     {
-        prix = document.getElementById("prixPoires").innerText;
-        prix = +prix + 20.00;
-        document.getElementById("prixPoires").innerText = prix.toFixed(2)
-        prixtotal = document.getElementById("prixTotal").innerText;
-        prixtotal = +prixtotal + +prix
-        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
+        prixnom = 'prixPoires';
+        poidsnom = 'poidsPoires';
+        qtsnom = 'qtePoires'
+        tarif = 20;
+        weight = 12;
     }
     else
     {
-        prix = document.getElementById("prixPrunes").innerText;
-        prix = +prix + 22.00;
-        document.getElementById("prixPrunes").innerText = prix.toFixed(2)
-        prixtotal = document.getElementById("prixTotal").innerText;
-        prixtotal = +prixtotal + +prix
-        document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
+        prixnom = 'prixPrunes';
+        poidsnom = 'poidsPrunes';
+        qtsnom = 'qtePrunes'
+        tarif = 22;
+        weight = 15;
     }
+    // Ajoute le montant total de l'article
+    prix = document.getElementById(prixnom).innerText;
+    prix = +prix + +tarif;
+    document.getElementById(prixnom).innerText = prix.toFixed(2)
+    // Ajoute le montant au prix total de la facture
+    prixtotal = document.getElementById("prixTotal").innerText;
+    prixtotal = +prixtotal + +prix
+    document.getElementById("prixTotal").innerText = prixtotal.toFixed(2)
 
+    // Ajouter le poids au poids total de l'article
+    poids = document.getElementById(poidsnom).innerText;
+    poids = +poids + +weight ;
+    document.getElementById(poidsnom).innerText = poids;
+    // ajouter le poid au poid total de la facture
+    poidstotal = document.getElementById("poidsTotal").innerText;
+    poidstotal = +poidstotal + +poids ;
+    document.getElementById("poidsTotal").innerText = poidstotal;
 
+    // Ajouter la qts au pommes
+    qts = document.getElementById(qtsnom).innerText;
+    qts = +qts + 1;
+    document.getElementById(qtsnom).innerText = qts;
+    // Ajouter la QTS au total
+    qtsTotal = document.getElementById("qteTotal").innerText;
+    qtsTotal = +qtsTotal + 1;
+    document.getElementById("qteTotal").innerText = qtsTotal;
 
 }
