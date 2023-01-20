@@ -13,25 +13,25 @@ function ajouter(choix){
     {
         prixnom = 'prixPommes';
         poidsnom = 'poidsPommes';
-        qtsnom = 'qtePommes'
-        tarif = 13.50;
-        weight = 10;
+        qtsnom = 'qtePommes';
+        tarif = parseFloat(document.getElementById("tarifpomme").innerText)
+        weight = parseInt(document.getElementById("lbspomme").innerText);
     }
     else if (choix === 'poire')
     {
         prixnom = 'prixPoires';
         poidsnom = 'poidsPoires';
         qtsnom = 'qtePoires'
-        tarif = 20;
-        weight = 12;
+        tarif = parseFloat(document.getElementById("tarifpoire").innerText);
+        weight = parseInt(document.getElementById("lbspoire").innerText);
     }
     else
     {
         prixnom = 'prixPrunes';
         poidsnom = 'poidsPrunes';
         qtsnom = 'qtePrunes'
-        tarif = 22;
-        weight = 15;
+        tarif = parseFloat(document.getElementById("tarifprune").innerText);
+        weight = parseInt(document.getElementById("lbsprune").innerText);
     }
     // Ajoute le montant total de l'article
     prix = document.getElementById(prixnom).innerText;
